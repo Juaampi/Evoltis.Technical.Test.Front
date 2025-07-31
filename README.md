@@ -25,6 +25,24 @@ La aplicación permite:
 
 Se valoró altamente el uso de `ngrx-form` para el manejo de formularios reactivos, mejorando la integración con NgRx.
 
----
+## Configuración inicial
+
+1. Cloná el proyecto:
+```bash
+   git clone https://github.com/Juaampi/Evoltis.Technical.Test.Front.git
+   cd technical-tests-frontend
+```
+
+2. Corre npm install:
+```bash
+   npm install
+```
+
+3. Entrá desde localhost:4200:
+```bash
+   Por CORS esta habilitado solo el puerto 4200.
+```
 
 ¡Gracias por revisar este proyecto!
+
+Autor Juan Pablo Garcia Evoltis - Technical Test
