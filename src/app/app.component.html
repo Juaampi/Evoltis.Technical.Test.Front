@@ -1,1 +1,13 @@
-<h1>Hola, tu puedes! Te damos una mano con este repo para esta prueba técnica</h1>
+<p-menubar>
+  <div class="p-d-flex p-ai-center">
+    <h3 class="p-mr-3">Evoltis Technical Test Front-End</h3>
+  </div>
+  <ng-template pTemplate="start">
+    <button pButton label="Home" icon="pi pi-home" class="p-button-text" [routerLink]="['/']"></button>
+  </ng-template>
+</p-menubar>
+
+<p-confirmDialog></p-confirmDialog>
+<p-toast></p-toast>
+
+<router-outlet></router-outlet>

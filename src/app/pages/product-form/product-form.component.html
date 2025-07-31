@@ -1,0 +1,53 @@
+<div class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+  <div class="card p-5 shadow " style="min-width: 400px; max-width: 600px; width: 100%;margin: 0 auto;">
+    <h3 class="text-center mb-4">{{ isEdit ? 'Editar Producto' : 'Crear Producto' }}</h3>
+
+    <form [formGroup]="form" (ngSubmit)="save()" class="p-fluid">
+      <div class="mb-3">
+        <label for="name" class="form-label">Nombre</label>
+        <input
+          id="name"
+          type="text"
+          pInputText
+          formControlName="name"
+          class="form-control"
+          placeholder="Ingrese el nombre del producto"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label for="price" class="form-label">Precio</label>
+        <input
+          id="price"
+          type="number"
+          pInputText
+          formControlName="price"
+          class="form-control"
+          placeholder="Ingrese el precio"
+        />
+      </div>
+
+      <div class="mb-4">
+        <label for="stock" class="form-label">Stock</label>
+        <input
+          id="stock"
+          type="number"
+          pInputText
+          formControlName="stock"
+          class="form-control"
+          placeholder="Ingrese el stock disponible"
+        />
+      </div>
+
+      <div class="text-center">
+        <button
+          pButton
+          type="submit"
+          label="Guardar"
+          class="p-button-rounded p-button-info"
+          [disabled]="form.invalid"
+        ></button>
+      </div>
+    </form>
+  </div>
+</div>

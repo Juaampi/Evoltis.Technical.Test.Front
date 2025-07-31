@@ -1,0 +1,76 @@
+
+<div class="container my-5">
+  <h3 class="p-mr-3 p-4">ABM de productos - Juan Pablo Garcia</h3>
+
+  <div class="d-flex justify-content-end mb-3 p-4">
+    <button 
+      pButton 
+      type="button" 
+      label="Agregar Producto" 
+      icon="pi pi-plus" 
+      class="p-button-info"
+      [routerLink]="['/products/create']">
+    </button>
+  </div>
+
+  <section class="product-list-section">
+    <div class="card p-4 shadow-sm">
+      <h3 class="mb-4">Lista de Productos</h3>
+
+      <p-table 
+        #dt 
+        [value]="(products$ | async) ?? []" 
+        [paginator]="true" 
+        [rows]="10" 
+        [filterDelay]="300" 
+        [responsiveLayout]="'scroll'">
+        
+        <ng-template pTemplate="header">
+          <tr>
+            <th pSortableColumn="id">ID <p-sortIcon field="id"></p-sortIcon></th>
+            <th pSortableColumn="name">Nombre <p-sortIcon field="name"></p-sortIcon></th>
+            <th pSortableColumn="price">Precio <p-sortIcon field="price"></p-sortIcon></th>
+            <th>Acciones</th>
+          </tr>
+          <tr>
+            <th>
+              <input pInputText type="text" (input)="filterTable($event, 'id')" placeholder="Filtrar ID"/>
+            </th>
+            <th>
+              <input pInputText type="text" (input)="filterTable($event, 'name')" placeholder="Filtrar Nombre"/>
+            </th>
+            <th>
+              <input pInputText type="text" (input)="filterTable($event, 'price')" placeholder="Filtrar Precio"/>
+            </th>
+            <th></th>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-product>
+          <tr>
+            <td>{{ product.id }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price | currency }}</td>
+            <td class="text-nowrap">
+              <button 
+                pButton 
+                type="button" 
+                icon="pi pi-pencil" 
+                class="p-button-rounded p-button-info me-2" 
+                [routerLink]="['/products/edit', product.id]">
+              </button>
+              <button 
+                pButton 
+                type="button" 
+                icon="pi pi-trash" 
+                class="p-button-rounded p-button-danger" 
+                (click)="deleteProduct(product.id)">
+              </button>
+            </td>
+          </tr>
+        </ng-template>
+
+      </p-table>
+    </div>
+  </section>
+</div>
