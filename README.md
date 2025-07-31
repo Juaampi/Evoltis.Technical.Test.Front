@@ -1,16 +1,30 @@
-# Evoltis Prueba Técnica
+# Frontend Angular - ABM de Productos - Evoltis - Juan Pablo Garcia
 
-Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) versión 16.2.0.
+Este proyecto es un frontend desarrollado con **Angular 16.2.0**, que implementa un ABM (Alta, Baja y Modificación) de productos.
 
-## Development
-Recuerda ejecutar `npm install`!
+## Descripción
 
-## Development server
+La aplicación permite:
 
-Ejecute `ng serve` para un servidor de desarrollo. Navegue hasta `http://localhost:4200/`. La aplicación se recargará automáticamente si cambia alguno de los archivos fuente.
+- Visualizar una lista de productos.
+- Agregar nuevos productos.
+- Editar productos existentes.
+- Eliminar productos.
 
-## Code scaffolding
+## Tecnologías y Características
 
-Ejecute `ng generate component component-name` para generar un nuevo componente. También puedes usar `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Código**: Uso correcto de TypeScript con buenas prácticas para legibilidad y mantenibilidad.
+- **NgRx (Redux)**: Implementación clara y funcional del estado global mediante NgRx básico.
+- **UI/UX**: Uso correcto de componentes de PrimeNG para una interfaz coherente, simple y navegable.
+- **Formularios**: Uso de formularios reactivos para un manejo robusto y flexible de los datos.
+- **Organización del Proyecto**: Separación clara entre módulos, componentes y estado para una arquitectura limpia y mantenible.
+- **Buenas Prácticas**:
+  - Manejo adecuado de Observables.
+  - Limpieza correcta de suscripciones.
+  - Código desacoplado, escalable y reutilizable.
 
+Se valoró altamente el uso de `ngrx-form` para el manejo de formularios reactivos, mejorando la integración con NgRx.
 
+---
+
+¡Gracias por revisar este proyecto!
